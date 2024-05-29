@@ -1,0 +1,36 @@
+footer {
+  padding: 0.5rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.2rem;
+  transition: 0.1s;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    background-color: #292929;
+  }
+}
+
+.one:hover {
+  color: var(--orange);
+}
+
+.two:hover {
+  color: var(--red);
+}
+
+.three:hover {
+  color: var(--teal);
+}

@@ -1,0 +1,38 @@
+<header>
+  <div class="logo-wrapper" routerLink="/">
+    <img src="/assets/logo.webp" />
+  </div>
+  <nav>
+    <span
+      class="one"
+      routerLink="/"
+      routerLinkActive="activated"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ languagePack().header.home }}</span
+    >
+    <span class="two" routerLink="/about-us" routerLinkActive="activated">{{
+      languagePack().header.aboutUs
+    }}</span>
+    <span class="three" routerLink="/services" routerLinkActive="activated">{{
+      languagePack().header.services
+    }}</span>
+    <span class="four" routerLink="/contact" routerLinkActive="activated">{{
+      languagePack().header.contact
+    }}</span>
+    <select
+      [value]="selectedLanguageIndex()"
+      (change)="onChangeLanguagePack($event.target)"
+    >
+      @for (language of languages; track $index) {
+      <option
+        [value]="$index"
+        [class.hide]="$first"
+        (change)="onChangeLanguagePack($event.target)"
+      >
+        {{ language.name }}
+      </option>
+      }
+    </select>
+    <img class="language-flag" [src]="selectedLanguage().imageUrl" />
+  </nav>
+</header>

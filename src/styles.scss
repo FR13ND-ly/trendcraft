@@ -1,0 +1,19 @@
+:root {
+  --orange: #fc9143;
+  --red: #cf322d;
+  --teal: #4ba680;
+  --green: #5fc738;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}

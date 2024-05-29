@@ -1,0 +1,32 @@
+h1 {
+  font-size: 2rem;
+  display: block;
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+  span::after {
+    content: "";
+    z-index: -1;
+    display: block;
+    position: absolute;
+    bottom: 1.6rem;
+    width: 100%;
+    height: 9px;
+    rotate: -1deg;
+    background: linear-gradient(to right, #fc9143, #cf322d, #4ba680, #5fc738);
+    margin-top: 0.5rem;
+    @media (max-width: 801px) {
+      bottom: 0.6rem;
+      height: 7px;
+    }
+  }
+  @media (min-width: 801px) {
+    font-size: 5rem;
+  }
+}
+
+.mark {
+  background: linear-gradient(to right, #fc9143, #cf322d, #4ba680, #5fc738);
+  width: fit-content;
+  padding: 0.2rem 1rem;
+}
